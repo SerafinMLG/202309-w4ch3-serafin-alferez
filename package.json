@@ -11,7 +11,8 @@
     "test": "jest",
     "test:prod": "jest --watchAll --coverage --watchAll=false --passWithNoTests",
     "test:w": "jest --watchAll --coverage --collectCoverageFrom=src/**/*.{ts,tsx}",
-    "test:f": "jest --watchAll --coverage"
+    "test:f": "jest --watchAll --coverage",
+    "api": "json-server --watch ./api/db.json"
   },
   "dependencies": {
     "react": "^18.2.0",
