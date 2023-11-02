@@ -12,7 +12,7 @@ export function List() {
   return (
     <ul className="characters-list row list-unstyled">
       {characters.map((item) => (
-        <Card key={item.name} character={item}></Card>
+        <Card key={item.name} item={item}></Card>
       ))}
     </ul>
   );

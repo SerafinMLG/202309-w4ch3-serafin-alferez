@@ -4,8 +4,10 @@ export interface Character {
   name: string;
   family: string;
   age: number;
-  category: King | Squire | Advisor | Figther;
+  category: King | Squire | Advisor | Fighter;
 };
+
+export type Category = 'King' | 'Fighter' | 'Advisor' | 'Squire';
 
 export interface King extends Character {
   reingYears: number;

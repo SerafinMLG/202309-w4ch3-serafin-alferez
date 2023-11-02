@@ -1,5 +1,5 @@
 import { Advisor, Fighter, King, Squire } from './character';
-import './css/styles.css';
+
 
 export type AnyCharacter = King | Fighter | Advisor | Squire;
 
