@@ -1,11 +1,13 @@
-import { Advisor, Category } from '../../model/character';
+import { Advisor } from '../../model/character';
 import { Fighter } from '../../model/character';
 import { King } from '../../model/character';
 import { Squire } from '../../model/character';
-import React from 'react';
 
 export type AnyCharacter = King | Fighter | Advisor | Squire;
 
+type Props = {
+  item: AnyCharacter; // Asegúrate de tener la interfaz Character definida con las propiedades necesarias.
+}
 
 function makeExtraData(item: AnyCharacter) {
 
@@ -19,22 +21,19 @@ function makeExtraData(item: AnyCharacter) {
     return <li>Asesora a: {item.servesTo.name}</li>;
   }
 }
-function addEmoji(category: Category) {
-  switch (category) {
-    case 'King':
-      return '👑';
-    case 'Fighter':
-      return '🗡';
-    case 'Advisor':
-      return '🎓';
-    default:
-      return '🛡';
-  }
-}
+// function addEmoji(category: Category) {
+//   switch (category) {
+//     case 'King':
+//       return '👑';
+//     case 'Fighter':
+//       return '🗡';
+//     case 'Advisor':
+//       return '🎓';
+//     default:
+//       return '🛡';
+//   }
+// }
 
-type Props = {
-  item: AnyCharacter; // Asegúrate de tener la interfaz Character definida con las propiedades necesarias.
-}
 
 export function Card({ item }: Props) {
   return (
